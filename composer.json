@@ -5,12 +5,13 @@
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "require": {
-        "php": "^7.3|^8.0",
+        "php": "^8.0",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.75",
         "laravel/sanctum": "^2.11",
-        "laravel/tinker": "^2.5"
+        "laravel/tinker": "^2.5",
+        "spatie/data-transfer-object": "^3.7"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
@@ -24,8 +25,12 @@
         "psr-4": {
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
-            "Database\\Seeders\\": "database/seeders/"
-        }
+            "Database\\Seeders\\": "database/seeders/",
+            "Domain\\" : "app/Domain/"
+        },
+        "files": [
+            "app/Supports/function_helper.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
